@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My HTML Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 2rem;
+      background-color: #f9f9f9;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      padding: 0.5rem;
+    }
+    table {
+      width: 100%;
+      background-color: white;
+    }
+    input, select {
+      padding: 0.5rem;
+      width: 100%;
+      margin-top: 0.3rem;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 1rem;
+      display: block;
+    }
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ordered List with Roman Numerals -->
+  <section>
+    <h2>Top Priorities</h2>
+    <ol type="I">
+      <li>Improve User Experience</li>
+      <li>Enhance Accessibility</li>
+      <li>Ensure Mobile Responsiveness</li>
+      <li>Optimize Performance</li>
+      <li>Deploy to Production</li>
+    </ol>
+  </section>
+
+  <!-- External Image from Pexels -->
+  <section>
+    <h2>Beautiful Nature</h2>
+    <img 
+      src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" 
+      alt="Nature scene from Pexels" 
+      width="100%" 
+      style="max-width: 600px; border-radius: 8px;">
+  </section>
+
+  <!-- Table of Contacts -->
+  <section>
+    <h2>Contact List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Mobile</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Joan Munyi</td>
+          <td>7916, Nairobi, KE</td>
+          <td>0712345678</td>
+          <td>joan@example.com</td>
+        </tr>
+        <tr>
+          <td>Martin Munyi</td>
+          <td>7916, Nairobi, KE</td>
+          <td>0787654321</td>
+          <td>martin@example.com</td>
+        </tr>
+        <tr>
+          <td>Esther Karanja</td>
+          <td>7916, Nairobi, KE</td>
+          <td>0723876543</td>
+          <td>esther@example.com</td>
+        </tr>
+        <tr>
+          <td>Lucy Mwihaki</td>
+          <td>3423, Nakuru, KE</td>
+          <td>0701456924</td>
+          <td>lucy@example.com</td>
+        </tr>
+        <tr>
+          <td>Brian Mwita</td>
+          <td>654, Kitui, KE</td>
+          <td>0767837629</td>
+          <td>brian@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Registration Form -->
+  <section>
+    <h2>Register</h2>
+    <form action="/submit" method="POST" aria-label="Registration Form">
+
+      <!-- Name -->
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+      <!-- Email -->
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="john@example.com" required>
+
+      <!-- Password -->
+      <label for="password">Password *</label>
+      <input type="password" id="password" name="password" placeholder="Enter a secure password" required minlength="6">
+
+      <!-- Date of Birth -->
+      <label for="dob">Date of Birth *</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <!-- Gender (Radio Buttons) -->
+      <label>Gender *</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label>
+
+      <!-- Country (Dropdown) -->
+      <label for="country">Country *</label>
+      <select id="country" name="country" required>
+        <option value="">-- Select your country --</option>
+        <option value="usa">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="kenya">Kenya</option>
+        <option value="sa">South Africa</option>
+        <option value="nigeria">Nigeria</option>
+      </select>
+
+      <!-- Interests (Checkboxes) -->
+      <label>Interests</label>
+      <input type="checkbox" id="coding" name="interests" value="coding">
+      <label for="coding">Coding</label><br>
+      <input type="checkbox" id="music" name="interests" value="music">
+      <label for="music">Music</label><br>
+      <input type="checkbox" id="travel" name="interests" value="travel">
+      <label for="travel">Travel</label><br>
+
+      <!-- Submit -->
+      <button type="submit">Register</button>
+
+    </form>
+  </section>
+
+</body>
+</html>
